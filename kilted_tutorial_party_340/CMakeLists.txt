@@ -39,7 +39,9 @@ if(BUILD_TESTING)
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
     $<INSTALL_INTERFACE:include>
   )
-  target_link_libraries(${PROJECT_NAME}_tutorial_test geometry_msgs)
+
+  # Jazzy used just 'geometry_msgs', kilted uses '${geometry_msgs_TARGETS}'
+  target_link_libraries(${PROJECT_NAME}_tutorial_test ${geometry_msgs_TARGETS})
 endif()
 
 ament_package()

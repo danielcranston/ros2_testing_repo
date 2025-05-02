@@ -7,7 +7,8 @@ TEST(kilted_tutorial_party_340, test_linking_with_geometry_msgs) {
   ASSERT_EQ(pose.orientation.w, 1.0);
 }
 
-int main(int argc, char **argv) {
+int main(int argc, char **argv)
+{
   testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();
 }
